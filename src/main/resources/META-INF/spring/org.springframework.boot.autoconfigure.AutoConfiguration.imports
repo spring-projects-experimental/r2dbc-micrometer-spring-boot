@@ -1,1 +1,1 @@
-io.r2dbc.proxy.observation.boot.autoconfigure.R2dbcObservationAutoConfiguration
+io.r2dbc.observation.boot.autoconfigure.R2dbcObservationAutoConfiguration

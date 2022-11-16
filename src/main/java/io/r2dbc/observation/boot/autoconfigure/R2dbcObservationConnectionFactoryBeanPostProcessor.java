@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.r2dbc.proxy.observation.boot.autoconfigure;
+package io.r2dbc.observation.boot.autoconfigure;
 
 import io.micrometer.common.lang.Nullable;
 import io.micrometer.observation.ObservationRegistry;
