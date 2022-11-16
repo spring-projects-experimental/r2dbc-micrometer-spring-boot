@@ -7,7 +7,7 @@
     <artifactId>r2dbc-micrometer-spring-boot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>r2dbc-micrometer-spring-boot</name>
-    <description>Demo project for Spring Boot</description>
+    <description>Spring Boot Auto Configuration for R2DBC Observation</description>
     <properties>
         <java.version>17</java.version>
         <maven.compiler.release>17</maven.compiler.release>
@@ -18,6 +18,24 @@
         <micrometer-bom.version>1.10.0</micrometer-bom.version>
         <micrometer-tracing-bom.version>1.0.0</micrometer-tracing-bom.version>
     </properties>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Tadaya Tsuyukubo</name>
+            <email>tadaya@ttddyy.net</email>
+        </developer>
+    </developers>
+    <scm>
+        <connection>scm:git:https://github.com/ttddyy/r2dbc-micrometer-spring-boot</connection>
+        <url>https://github.com/ttddyy/r2dbc-micrometer-spring-boot</url>
+    </scm>
 
     <dependencyManagement>
         <dependencies>
@@ -131,9 +149,6 @@
             <artifactId>micrometer-tracing-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
-
     </dependencies>
 
     <repositories>
