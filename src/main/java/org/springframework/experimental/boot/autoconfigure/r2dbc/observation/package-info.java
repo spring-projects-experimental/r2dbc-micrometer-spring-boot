@@ -19,6 +19,6 @@
  * Micrometer Observation for R2DBC.
  */
 @NonNullApi
-package io.r2dbc.observation.boot.autoconfigure;
+package org.springframework.experimental.boot.autoconfigure.r2dbc.observation;
 
 import io.micrometer.common.lang.NonNullApi;

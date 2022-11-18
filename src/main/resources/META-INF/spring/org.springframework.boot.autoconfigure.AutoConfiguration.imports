@@ -1,1 +1,1 @@
-io.r2dbc.observation.boot.autoconfigure.R2dbcObservationAutoConfiguration
+org.springframework.experimental.boot.autoconfigure.r2dbc.observation.R2dbcObservationAutoConfiguration

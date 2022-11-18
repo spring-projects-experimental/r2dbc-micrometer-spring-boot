@@ -5,7 +5,7 @@
       "type": "java.lang.Boolean",
       "description": "Enable R2DBC observation.",
       "defaultValue": true,
-      "sourceType": "io.r2dbc.observation.boot.autoconfigure.R2dbcObservationAutoConfiguration"
+      "sourceType": "org.springframework.experimental.boot.autoconfigure.r2dbc.observation.R2dbcObservationAutoConfiguration"
     }
   ]
 }

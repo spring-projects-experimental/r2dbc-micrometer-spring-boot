@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package io.r2dbc.observation.boot.autoconfigure;
+package org.springframework.experimental.boot.autoconfigure.r2dbc.observation;
 
 import io.micrometer.observation.ObservationRegistry;
 import io.r2dbc.spi.ConnectionFactory;
