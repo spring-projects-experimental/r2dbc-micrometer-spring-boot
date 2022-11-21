@@ -4,7 +4,9 @@ Provides Spring Boot 3 auto configuration for R2DBC observation with [Micrometer
 
 ## Project Setup
 
-The maven artifacts are available in the spring release/snapshot repositories.
+Maven artifacts are available in the spring release/snapshot repositories.
+- https://repo.spring.io/release
+- https://repo.spring.io/snapshot (For snapshot version)
 
 ### Maven
 ```xml
@@ -50,8 +52,8 @@ The maven artifacts are available in the spring release/snapshot repositories.
 
 ```groovy
 repositories {
-    maven { url "https://oss.sonatype.org/content/repositories/release" }
-    // maven { url "https://oss.sonatype.org/content/repositories/snapshots" } // for snapshot usage
+	maven { url 'https://repo.spring.io/release' }
+	// maven { url 'https://repo.spring.io/snapshot' }  // for snapshot usage
 }
 
 dependencies {
