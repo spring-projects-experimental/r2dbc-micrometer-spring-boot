@@ -23,7 +23,7 @@ jobs:
           server-username: ARTIFACTORY_USERNAME
           server-password: ARTIFACTORY_PASSWORD
       - name: Build with Maven
-        run: ./mvnw -B deploy
+        run: ./mvnw -B javadoc:jar source:jar deploy
         env:
           ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
           ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
