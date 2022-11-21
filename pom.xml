@@ -37,6 +37,17 @@
         <url>https://github.com/spring-projects-experimental/r2dbc-micrometer-spring-boot</url>
     </scm>
 
+    <distributionManagement>
+        <repository>
+            <id>spring</id>
+            <url>https://repo.spring.io/milestone</url>
+        </repository>
+        <snapshotRepository>
+            <id>spring</id>
+            <url>https://repo.spring.io/snapshot</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
