@@ -46,7 +46,7 @@
     <distributionManagement>
         <repository>
             <id>spring</id>
-            <url>https://repo.spring.io/milestone</url>
+            <url>https://repo.spring.io/release</url>
         </repository>
         <snapshotRepository>
             <id>spring</id>
