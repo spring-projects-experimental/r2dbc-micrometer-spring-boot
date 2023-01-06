@@ -15,14 +15,16 @@ jobs:
         with:
           java-version: 17
           distribution: temurin
-          cache: 'maven'
-          server-id: spring
-          server-username: ARTIFACTORY_USERNAME
-          server-password: ARTIFACTORY_PASSWORD
+          server-id: ossrh
+          server-username: MAVEN_USERNAME
+          server-password: MAVEN_PASSWORD
+          gpg-private-key: ${{ secrets.GPG_PRIVATE_KEY }}
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE
       - name: Validation
         run: ./mvnw -B enforcer:enforce -Drules=requireReleaseDeps,requireReleaseVersion
-      - name: Build with Maven
-        run: ./mvnw -B javadoc:jar source:jar deploy
+      - name: Publish package
+        run: ./mvnw -B javadoc:jar source:jar deploy -DskipTests=true -Pgithub-ossrh
         env:
-          ARTIFACTORY_USERNAME: ${{ secrets.ARTIFACTORY_USERNAME }}
-          ARTIFACTORY_PASSWORD: ${{ secrets.ARTIFACTORY_PASSWORD }}
+          MAVEN_USERNAME: ${{ secrets.OSSRH_USERNAME }}
+          MAVEN_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
