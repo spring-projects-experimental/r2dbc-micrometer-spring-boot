@@ -20,7 +20,7 @@ Released artifacts are available in the maven central. Snapshot are available in
           <enabled>false</enabled>
       </releases>
       <snapshots>
-        <enabled>false</enabled>
+        <enabled>true</enabled>
       </snapshots>
     </repository>
   </repositories>
