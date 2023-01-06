@@ -28,7 +28,6 @@ import org.springframework.boot.autoconfigure.r2dbc.R2dbcAutoConfiguration;
 import org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
-import org.springframework.util.StringUtils;
 
 /**
  * {@link EnableAutoConfiguration Auto-configuration} for Micrometer Observation
@@ -45,14 +44,11 @@ public class R2dbcObservationAutoConfiguration {
 
 	@Bean
 	public static R2dbcObservationConnectionFactoryBeanPostProcessor r2dbcObservationConnectionFactoryBeanPostProcessor(
-			R2dbcObservationProperties observationProperties, ObjectProvider<ObservationRegistry> observationRegistry,
-			R2dbcProperties r2dbcProperties) {
-		String r2dbcUrl = observationProperties.getUrl();
-		if (!StringUtils.hasText(r2dbcUrl)) {
-			r2dbcUrl = r2dbcProperties.getUrl();
-		}
-		return new R2dbcObservationConnectionFactoryBeanPostProcessor(observationProperties, observationRegistry,
-				r2dbcUrl);
+			ObjectProvider<ObservationRegistry> observationRegistryProvider,
+			ObjectProvider<R2dbcObservationProperties> observationPropertiesProvider,
+			ObjectProvider<R2dbcProperties> r2dbcPropertiesProvider) {
+		return new R2dbcObservationConnectionFactoryBeanPostProcessor(observationRegistryProvider,
+				observationPropertiesProvider, r2dbcPropertiesProvider);
 	}
 
 }

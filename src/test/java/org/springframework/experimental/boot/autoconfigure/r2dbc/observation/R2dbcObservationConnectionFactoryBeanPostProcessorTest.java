@@ -25,6 +25,7 @@ import io.r2dbc.spi.Wrapped;
 import org.junit.jupiter.api.Test;
 
 import org.springframework.beans.factory.ObjectProvider;
+import org.springframework.boot.autoconfigure.r2dbc.R2dbcProperties;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.mock;
@@ -40,15 +41,20 @@ class R2dbcObservationConnectionFactoryBeanPostProcessorTest {
 	@Test
 	@SuppressWarnings("unchecked")
 	void postProcessAfterInitialization() {
-		R2dbcObservationProperties properties = new R2dbcObservationProperties();
 		ObservationRegistry observationRegistry = ObservationRegistry.create();
-		String url = "r2dbc:h2:mem://sa@/testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE";
-
 		ObjectProvider<ObservationRegistry> objectProvider = mock(ObjectProvider.class);
 		when(objectProvider.getObject()).thenReturn(observationRegistry);
 
+		String url = "r2dbc:h2:mem://sa@/testdb;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE";
+		R2dbcObservationProperties properties = new R2dbcObservationProperties();
+		properties.setUrl(url);
+		ObjectProvider<R2dbcObservationProperties> observationPropertiesProvider = mock(ObjectProvider.class);
+		when(observationPropertiesProvider.getObject()).thenReturn(properties);
+
+		ObjectProvider<R2dbcProperties> r2dbcPropertiesProvider = mock(ObjectProvider.class);
+
 		R2dbcObservationConnectionFactoryBeanPostProcessor processor = new R2dbcObservationConnectionFactoryBeanPostProcessor(
-				properties, objectProvider, url);
+				objectProvider, observationPropertiesProvider, r2dbcPropertiesProvider);
 
 		Object result;
 		Object object = new Object();
