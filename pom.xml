@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework.experimental</groupId>
     <artifactId>r2dbc-micrometer-spring-boot</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <name>r2dbc-micrometer-spring-boot</name>
     <description>Spring Boot Auto Configuration for R2DBC Observation</description>
     <url>https://github.com/spring-projects-experimental/r2dbc-micrometer-spring-boot</url>
