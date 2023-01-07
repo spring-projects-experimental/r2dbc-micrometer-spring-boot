@@ -106,6 +106,7 @@
                 <artifactId>flatten-maven-plugin</artifactId>
                 <version>${flatten-maven-plugin.version}</version>
                 <configuration>
+                    <flattenMode>oss</flattenMode>
                 </configuration>
                 <executions>
                     <execution>
