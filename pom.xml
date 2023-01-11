@@ -106,7 +106,10 @@
                 <artifactId>flatten-maven-plugin</artifactId>
                 <version>${flatten-maven-plugin.version}</version>
                 <configuration>
-                    <flattenMode>oss</flattenMode>
+                    <flattenMode>ossrh</flattenMode>
+                    <pomElements>
+                        <repositories>flatten</repositories>
+                    </pomElements>
                 </configuration>
                 <executions>
                     <execution>
