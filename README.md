@@ -5,7 +5,6 @@ Provides Spring Boot 3 auto configuration for R2DBC observation with [Micrometer
 ## Project Setup
 
 Released artifacts are available in the maven central. Snapshot are available in the spring snapshot repository.
-- https://repo.spring.io/release
 - https://repo.spring.io/snapshot (For snapshot version)
 
 ### Maven
