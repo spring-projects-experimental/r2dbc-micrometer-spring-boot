@@ -33,3 +33,4 @@ build/
 .vscode/
 
 .flattened-pom.xml
+pom.xml.versionsBackup
