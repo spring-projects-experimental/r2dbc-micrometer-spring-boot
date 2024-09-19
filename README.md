@@ -2,6 +2,12 @@
 
 Provides Spring Boot 3 auto configuration for R2DBC observation with [Micrometer Observation API](https://micrometer.io/docs/observation).
 
+**UPDATE:**  
+Spring Boot **`3.2`** now includes built-in auto-configuration for **`r2dbc-proxy` observability**.  
+For earlier versions, this project offers seamless auto-configuration for **Spring Boot `3.0` and `3.1`**.
+
+----
+
 ## Project Setup
 
 Released artifacts are available in the maven central. Snapshot are available in the spring snapshot repository.
